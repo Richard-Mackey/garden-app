@@ -4,24 +4,60 @@ let plantType = prompt("Enter the plant type: flower, vegetable, fruit");
 let lowerCasePlantType = plantType.toLowerCase();
 let adviceData = {
   spring: {
-    flower: "Plant and cover to protect from frost",
-    vegetable: "Sow seeds in greenhouse or on a windowsill",
-    fruit: "Prune back any woody branches",
+    flower: {
+      advice: "Plant and cover to protect from frost",
+      suggestedPlants: "Daffodil, Tulip, Bluebell",
+    },
+    vegetable: {
+      advice: "Sow seeds in greenhouse or on a windowsill",
+      suggestedPlants: "Lettuce, Spinach, Kale",
+    },
+    fruit: {
+      advice: "Prune back any woody branches",
+      suggestedPlants: "Strawberries, Raspberries, Rhubarb",
+    },
   },
   summer: {
-    flower: "Water regularly and provide shade",
-    vegetable: "Keep soil moist and watch for pests",
-    fruit: "Water regularly and move into spot with full sun",
+    flower: {
+      advice: "Water regularly and provide shade",
+      suggestedPlants: "Sunflowers, Dahlias, Lavender",
+    },
+    vegetable: {
+      advice: "Keep soil moist and watch for pests",
+      suggestedPlants: "Tomatoes, Cucumbers, Peppers",
+    },
+    fruit: {
+      advice: "Water regularly and move into spot with full sun",
+      suggestedPlants: "Blackberry, Blueberry, Grape",
+    },
   },
   autumn: {
-    flower: "Remove any dead flowers",
-    vegetable: "Harvest vegatables and store",
-    fruit: "Remove any unripened fruit to prevent disease",
+    flower: {
+      advice: "Remove any dead flowers",
+      suggestedPlants: "Chrysanthemums, Asters, Cyclamen",
+    },
+    vegetable: {
+      advice: "Harvest vegatables and store",
+      suggestedPlants: "Carrots, Kale, Broccoli",
+    },
+    fruit: {
+      advice: "Remove any unripened fruit to prevent disease",
+      suggestedPlants: "Apples, Pears, Plums",
+    },
   },
   winter: {
-    flower: "Protect from frost",
-    vegetable: "Use greenhouse or covers",
-    fruit: "Prune back any woody branches",
+    flower: {
+      advice: "Protect from frost",
+      suggestedPlants: "Snowdrops, Pansies, Winter Jasmine",
+    },
+    vegetable: {
+      advice: "Use greenhouse or covers",
+      suggestedPlants: "Kale, Leeks, Parsnips",
+    },
+    fruit: {
+      advice: "Prune back any woody branches",
+      suggestedPlants: "Apples, Pears, Raspberries",
+    },
   },
 };
 
@@ -29,7 +65,11 @@ if (
   adviceData[lowerCaseSeason] &&
   adviceData[lowerCaseSeason][lowerCasePlantType]
 ) {
-  console.log(adviceData[lowerCaseSeason][lowerCasePlantType]);
+  console.log(adviceData[lowerCaseSeason][lowerCasePlantType].advice);
+  console.log(
+    "Suggested plants: " +
+      adviceData[lowerCaseSeason][lowerCasePlantType].suggestedPlants
+  );
 } else {
   console.log("Please enter valid season and plant type");
 }
