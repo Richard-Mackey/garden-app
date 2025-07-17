@@ -37,5 +37,5 @@ if (
 // TODO: Examples of possible features to add:
 // - Add detailed comments explaining each block of code.
 // - Refactor the code into functions for better readability and modularity.
-// - Store advice in an object for multiple plants and lowerCaseSeasons.
-// - Suggest plants that thrive in the given lowerCaseSeason.
+// - Store advice in an object for multiple plants and seasons.
+// - Suggest plants that thrive in the given seasons.
